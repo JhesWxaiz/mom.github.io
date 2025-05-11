@@ -9,11 +9,9 @@ body {
   }
   
   .scene {
-    /* Standard letter proportions (A4: 210mm x 297mm, scaled for screen) */
-    width: 1000px; /* Aumentar el ancho para dar más espacio a las imágenes */
-    height: 420px; /* 210mm * 2 */
+    width: 1000px;
+    height: 420px;
     perspective: 1000px;
-    animation: float 3s ease-in-out infinite;
     position: relative;
   }
   
@@ -88,7 +86,7 @@ body {
     background: #d62828;
     background-image: linear-gradient(45deg, #d62828 25%, #e63946 25%, #e63946 50%, #d62828 50%, #d62828 75%, #e63946 75%, #e63946 100%);
     background-size: 40px 40px;
-    aspect-ratio: 297 / 210; /* A4 landscape */
+    aspect-ratio: 297 / 210;
     box-shadow: 0 0 30px rgba(200, 0, 0, 0.3) inset;
   }
   
@@ -131,52 +129,6 @@ body {
   .decoration-4 {
     bottom: 20px;
     right: 20px;
-  }
-  
-  .envelope-front, .envelope-flap-top, .envelope-flap-bottom, .envelope-flap-left, .envelope-flap-right {
-    position: absolute;
-    background: #fff3d4;
-    border: 2px solid #c6a969;
-  }
-  
-  .envelope-front {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  .envelope-flap-top {
-    width: 100%;
-    height: 50%;
-    top: 0;
-    transform-origin: top;
-    transition: transform 0.6s ease;
-    z-index: 2;
-  }
-  
-  .envelope-flap-top.open {
-    transform: rotateX(-180deg);
-  }
-  
-  .envelope-flap-bottom {
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    z-index: 1;
-  }
-  
-  .envelope-flap-left {
-    width: 50%;
-    height: 100%;
-    left: 0;
-    z-index: 1;
-  }
-  
-  .envelope-flap-right {
-    width: 50%;
-    height: 100%;
-    right: 0;
-    z-index: 1;
   }
   
   .heart {
@@ -305,25 +257,67 @@ body {
   .top-left {
     top: 15px;
     left: 15px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23d62828" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l5 5M7 7l5-5M2 12l5-5M7 17l-5-5M12 22l-5-5M17 17l-5 5M22 12l-5 5M17 7l5 5"/></svg>');
   }
   
   .top-right {
     top: 15px;
     right: 15px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23d62828" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l5 5M7 7l5-5M2 12l5-5M7 17l-5-5M12 22l-5-5M17 17l-5 5M22 12l-5 5M17 7l5 5"/></svg>');
   }
   
   .bottom-left {
     bottom: 15px;
     left: 15px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23d62828" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l5 5M7 7l5-5M2 12l5-5M7 17l-5-5M12 22l-5-5M17 17l-5 5M22 12l-5 5M17 7l5 5"/></svg>');
   }
   
   .bottom-right {
     bottom: 15px;
     right: 15px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23d62828" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l5 5M7 7l5-5M2 12l5-5M7 17l-5-5M12 22l-5-5M17 17l-5 5M22 12l-5 5M17 7l5 5"/></svg>');
+  }
+  
+  .envelope-front, .envelope-flap-top, .envelope-flap-bottom, .envelope-flap-left, .envelope-flap-right {
+    position: absolute;
+    background: #fff3d4;
+    border: 2px solid #c6a969;
+  }
+  
+  .envelope-front {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .envelope-flap-top {
+    width: 100%;
+    height: 50%;
+    top: 0;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    z-index: 2;
+  }
+  
+  .envelope-flap-top.open {
+    transform: rotateX(-180deg);
+  }
+  
+  .envelope-flap-bottom {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .envelope-flap-left {
+    width: 50%;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .envelope-flap-right {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    z-index: 1;
   }
   
   .envelope {
@@ -508,13 +502,13 @@ body {
   }
   
   .left-image {
-    left: -220px; /* Mover más a la izquierda para que esté completamente fuera */
+    left: -250px;
     transform: translateY(-50%) translateX(-200px) scale(0.8) rotate(-10deg);
     background-image: url('mama.jpg');
   }
   
   .right-image {
-    right: -220px; /* Mover más a la derecha para que esté completamente fuera */
+    right: -250px;
     transform: translateY(-50%) translateX(200px) scale(0.8) rotate(10deg);
     background-image: url('mamauno.jpg');
   }
@@ -538,12 +532,12 @@ body {
   
   .left-image.visible {
     transform: translateY(-50%) translateX(0) scale(1) rotate(0deg);
-    left: -250px; /* Posición final más alejada */
+    left: -250px;
   }
   
   .right-image.visible {
     transform: translateY(-50%) translateX(0) scale(1) rotate(0deg);
-    right: -250px; /* Posición final más alejada */
+    right: -250px;
   }
   
   @keyframes float-photo {
