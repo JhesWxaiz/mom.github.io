@@ -199,7 +199,6 @@ body {
     transform: rotateY(180deg);
     position: relative;
     box-sizing: border-box;
-    overflow-y: auto;
     background-image: radial-gradient(circle, #ffecec 0%, #ffdbdb 100%);
   }
   
@@ -217,6 +216,7 @@ body {
     position: relative;
     aspect-ratio: 297 / 210;
     border: 5px solid #d62828;
+    overflow-y: auto;
   }
   
   .top-right-corner {
@@ -360,8 +360,6 @@ body {
     padding: 5px 10px 10px 10px;
     max-width: 90%;
     margin: 0 auto;
-    overflow-y: auto;
-    max-height: 100%;
   }
   
   .message.visible {
@@ -587,10 +585,24 @@ body {
   }
   
   @media (max-width: 768px) {
+    body {
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+    
     .scene {
       max-width: 70vw;
       aspect-ratio: 1.2/1;
       margin-left: 15%;
+    }
+    
+    .card-back-content {
+      padding: 20px;
+    }
+    
+    .message {
+      font-size: 14px;
+      padding-bottom: 50px;
     }
     
     .floating-image {
@@ -613,26 +625,20 @@ body {
     .right-image.visible {
       right: -130px;
     }
-    
-    .front-content {
-      padding: 20px;
-    }
-    
-    .card-back-content {
-      padding: 20px;
-    }
-    
-    .message {
-      font-size: 14px;
-    }
   }
   
   @media (max-width: 576px) {
+    body {
+      padding: 10px;
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+    
     .scene {
       max-width: 65vw;
       aspect-ratio: 1/1.2;
-      height: auto;
       margin-left: 18%;
+      margin-bottom: 50px;
     }
     
     .floating-image {
@@ -706,6 +712,7 @@ body {
     .message {
       font-size: 12px;
       line-height: 1.6;
+      padding-bottom: 60px;
     }
     
     .message p {
@@ -719,11 +726,18 @@ body {
   }
   
   @media (max-width: 360px) {
+    body {
+      padding: 10px;
+      padding-top: 20px;
+      padding-bottom: 60px;
+    }
+    
     .scene {
       transform: scale(0.9);
-      margin: -5% 0;
+      margin: 0;
       max-width: 60vw;
       margin-left: 20%;
+      margin-bottom: 50px;
     }
     
     .message {
